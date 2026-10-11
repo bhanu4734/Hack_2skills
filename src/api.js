@@ -2,7 +2,10 @@
  * API client for BrewBatch Backend with transparent fallback
  */
 
-const BASE_URL = 'http://localhost:8000';
+const rawApiUrl = import.meta.env.VITE_API_URL || '';
+const BASE_URL = rawApiUrl
+  ? (rawApiUrl.startsWith('http') ? rawApiUrl : `https://${rawApiUrl}`)
+  : '';
 
 export async function fetchState() {
   const res = await fetch(`${BASE_URL}/api/state`);
