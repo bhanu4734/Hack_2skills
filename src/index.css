@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #f7f2ea;
+    color: #2b1810;
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    color: #26150d;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Warm cafe scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f2ea;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9c8b8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c67c4e;
+}
+
+/* Warm artisan card styles */
+.coffee-card {
+  background-color: #ffffff;
+  border: 1px solid #eddcd2;
+  box-shadow: 0 4px 24px -4px rgba(66, 36, 21, 0.06);
+}
+
+.coffee-card-subtle {
+  background-color: #fcfaf7;
+  border: 1px solid #eddcd2;
+}
+
+.coffee-card-dark {
+  background: linear-gradient(145deg, #2e170d 0%, #1f0f08 100%);
+  border: 1px solid #432516;
+  color: #fcfaf8;
+  box-shadow: 0 10px 30px -5px rgba(35, 17, 9, 0.25);
+}
+
+.coffee-btn-caramel {
+  background: linear-gradient(135deg, #d8864f 0%, #c67c4e 100%);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.coffee-btn-caramel:hover {
+  background: linear-gradient(135deg, #e3925b 0%, #b86e41 100%);
+  box-shadow: 0 6px 20px rgba(198, 124, 78, 0.35);
+}
+
