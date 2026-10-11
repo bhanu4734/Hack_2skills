@@ -5,7 +5,7 @@
 const rawApiUrl = import.meta.env.VITE_API_URL || '';
 const BASE_URL = rawApiUrl
   ? (rawApiUrl.startsWith('http') ? rawApiUrl : `https://${rawApiUrl}`)
-  : '';
+  : 'https://hack-2skills-be.onrender.com';
 
 export async function fetchState() {
   const res = await fetch(`${BASE_URL}/api/state`);
